@@ -19,15 +19,30 @@ pipeline:
             steps:
               - step:
                   identifier: echo
-                  name: echo
+                  name: compile
                   spec:
-                    command: echo hello world
+                    shell: Sh
+                    command: mvn compile
                   timeout: ""
                   type: Run
+              - step:
+                  type: Run
+                  name: compile
+                  identifier: compile
+                  spec:
+                    shell: Sh
+                    command: mvn test
+              - step:
+                  type: Run
+                  name: package
+                  identifier: package
+                  spec:
+                    shell: Sh
+                    command: mvn package
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
