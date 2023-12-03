@@ -27,7 +27,7 @@ pipeline:
                   type: Run
               - step:
                   type: Run
-                  name: compile
+                  name: test
                   identifier: compile
                   spec:
                     shell: Sh
