@@ -40,7 +40,7 @@ pipeline:
                     shell: Sh
                     command: mvn package
           platform:
-            os: Linux
+            os: Windows
             arch: Amd64
           runtime:
             type: Docker
