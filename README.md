@@ -1,4 +1,4 @@
-# java-hello-world-with-maven1
+# java-hello-world-with-maven12
 Hello World sample with Java with Maven
 
 ## Compile
