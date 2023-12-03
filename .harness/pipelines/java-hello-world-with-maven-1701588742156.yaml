@@ -48,3 +48,21 @@ pipeline:
         type: CI
         delegateSelectors:
           - docker-delegate
+  notificationRules:
+    - name: local webhook
+      identifier: local_webhook
+      pipelineEvents:
+        - type: AllEvents
+        - type: PipelineStart
+        - type: PipelineEnd
+        - type: PipelineSuccess
+        - type: PipelineFailed
+        - type: StageFailed
+        - type: StageSuccess
+        - type: StageStart
+        - type: StepFailed
+      notificationMethod:
+        type: Webhook
+        spec:
+          webhookUrl: https://hkdk.events/JTYSLYDJMPTE
+      enabled: true
