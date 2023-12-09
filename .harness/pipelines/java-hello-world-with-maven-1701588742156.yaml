@@ -31,3 +31,14 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
+  variables:
+    - name: branch
+      type: String
+      description: ""
+      required: false
+      value: <+trigger.targetBranch>
+    - name: spec
+      type: String
+      description: ""
+      required: false
+      value: <+pipeline.properties.ci.codebase.build.spec.branch>
