@@ -42,3 +42,8 @@ pipeline:
       description: ""
       required: false
       value: <+pipeline.properties.ci.codebase.build.spec.branch>
+    - name: BranchName
+      type: String
+      description: ""
+      required: false
+      value: <+pipeline.properties.ci.codebase.build.spec.branch>
