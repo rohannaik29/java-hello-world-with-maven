@@ -66,3 +66,9 @@ pipeline:
         spec:
           webhookUrl: https://hkdk.events/JTYSLYDJMPTE
       enabled: true
+  variables:
+    - name: branch
+      type: String
+      description: ""
+      required: true
+      value: <+trigger.targetBranch>
