@@ -11,26 +11,20 @@ pipeline:
         repoName: rohannaik29/java-hello-world-with-maven
   stages:
     - stage:
-        identifier: build
-        name: build
+        name: Build
+        identifier: Build
+        description: ""
+        type: Custom
         spec:
-          cloneCodebase: true
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
+                  type: Wait
+                  name: Wait_1
+                  identifier: Wait_1
                   spec:
-                    command: echo hello world
-                  timeout: ""
-                  type: Run
-          platform:
-            arch: Amd64
-            os: Linux
-          runtime:
-            spec: {}
-            type: Cloud
-        type: CI
+                    duration: 10s
+        tags: {}
   variables:
     - name: branch
       type: String
