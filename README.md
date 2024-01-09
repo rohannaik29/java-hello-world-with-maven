@@ -4,7 +4,7 @@ Hello World sample with Java with Maven....
 ## Compile  
 
 ```
-$ mvn compile  
+$ mvn compile   
 ``` 
  
 ## Test
